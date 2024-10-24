@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { ForumsService } from '../forums/services/forums.service';
+import {ChatBotService} from '../services/chat-bot.service';
+import {UserService} from '../services/user.service';
 
 @Component({
   selector: 'app-chat-list',

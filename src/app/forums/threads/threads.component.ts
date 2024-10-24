@@ -11,7 +11,11 @@ import { Thread } from '../services/data';
 export class ThreadsComponent implements OnInit {
   threads: Thread[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private forumService: ForumsService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.threads = this.forumService.forum(params['forum_alias']).threads;
+    });
+  }
 }

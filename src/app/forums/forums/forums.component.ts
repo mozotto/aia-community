@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ForumsService } from '../services/forums.service';
 import { Forum } from '../services/data';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-forums',
